@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body,
+app-root {
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+	line-height: 1.4;
+	background-color: #d2b48c;
+	background-image: url("https://wallpapers.com/images/hd/cork-board-background-1920-x-1080-18sxh90mwp63t5av.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% 99.5%;
+	background-attachment: fixed;
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+}

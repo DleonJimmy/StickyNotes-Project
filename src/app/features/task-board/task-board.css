@@ -1,0 +1,108 @@
+h1 {
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+}
+
+.count {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+}
+
+.board {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  left: 50px;
+   font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+  font-style: normal ;
+  
+}
+ 
+.sticky {
+  position: relative;
+  min-height: 200px;
+  padding: 1.25rem;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  transform: rotate(-1.5deg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+ 
+.sticky:nth-child(even) { transform: rotate(1.5deg); }
+ 
+.sticky:hover {
+  transform: rotate(0) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+ 
+.sticky[data-color='yellow'] { background: #FFF3A0; }
+.sticky[data-color='pink']   { background: #FFC7D9; }
+.sticky[data-color='blue']   { background: #B8E1FF; }
+.sticky[data-color='green']  { background: #C4EFA8; }
+ 
+.sticky.done h2 {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.edit-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.edit-link img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+.pin-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pin-remove img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+}
+ 
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #7a6f5d;
+  font-style: italic;
+}
+ 
+ .board{ 
+  display:flex;
+  height: 50%;
+  width: 75%;
+
+  background-position: fixed;
+  background-size: 100%;
+  background-blend-mode: normal;
+}

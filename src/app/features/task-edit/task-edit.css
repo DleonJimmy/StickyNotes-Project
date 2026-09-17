@@ -1,0 +1,55 @@
+.formbox h1 {
+	text-align: center;
+	margin: 0.5rem 0 1rem;
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 100;
+}
+
+.formbox {
+	display: grid;
+	gap: 0.75rem;
+	width: min(90%, 36rem);
+	margin: 0 auto;
+	padding: 1.5rem;
+	box-sizing: border-box;
+	border-radius: 2px;
+	background: #fff3a0;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 100;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	font: inherit;
+}
+
+.task-form textarea {
+	resize: vertical;
+}
+
+.task-form button {
+	cursor: pointer;
+	background: #c4efa8;
+}
+
+.task-form button:hover:not(:disabled) {
+	background: #b8e18f;
+}
+
+.task-form button:disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.error {
+	margin: 0;
+	color: #9b1c1c;
+}

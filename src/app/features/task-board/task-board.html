@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<h1>My Board<span class="count"> {{openCount()}}/{{totalCount()}}</span></h1> 
+<div class="board"> 
+@for (task of tasks(); track task.id) { 
+<article class="sticky" [class.done]="task.done" [attr.data-color]="task.color"> 
+<h2>{{ task.title }}</h2> 
+<p>{{ task.details }}</p>
+<button class="pin-remove" (click)="remove(task.id)" aria-label="Delete task">
+	<img src="/trash-can.png" alt="" />
+</button>
+<button class="edit-link" [routerLink]="['/tasks', task.id, 'edit']" aria-label="Edit task">
+	<img src="/pen-to-square-solid(1).png" alt="" />
+</button>
+</article> 
+}
+@empty { 
+<p class="empty">No tasks yet. Pin your first one!</p> 
+} 
+</div> 
+
+
+
+
+<router-outlet />

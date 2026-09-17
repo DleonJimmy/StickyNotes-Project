@@ -1,0 +1,36 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+@if (task(); as currentTask) {
+  <form class='formbox'[formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <h2>Edit task</h2>
+
+    <label>
+      Title
+      <input type="text" formControlName="title" />
+    </label>
+
+    <label>
+      Details
+      <textarea formControlName="details"></textarea>
+    </label>
+
+    <label>
+      Color
+      <select id="color" formControlName="color"> 
+<option value="yellow">Yellow</option> 
+<option value="pink">Pink</option> 
+<option value="blue">Blue</option> 
+<option value="green">Green</option> 
+</select> 
+    </label>
+
+    <div class="actions">
+      <button type="submit" [disabled]="taskForm.invalid">Save</button>
+      
+    </div>
+  </form>
+} @else {
+  <p>Loading task...</p>
+}
+
